@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-readex), ui-sans-serif, system-ui, sans-serif;
+
+  /* Contrast on white / lavender-50 (WCAG): ink 15:1, brand 8.6:1, slate-600 ~7:1 */
+  --color-ink: #2b1b3f;
+  --color-brand: #5a3c8c;
+  --color-brand-dark: #472d73;
+  --color-lavender-50: #f6f2fb;
+  --color-lavender-100: #ece4f7;
+  --color-lavender-200: #dccef0;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
