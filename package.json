@@ -1,6 +1,6 @@
 {
   "name": "awraq-lavender",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +8,8 @@
     "start": "npx serve out"
   },
   "dependencies": {
+    "@fontsource/aref-ruqaa": "^5.0.0",
+    "@fontsource/readex-pro": "^5.0.0",
     "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

@@ -1,18 +1,35 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-readex), ui-sans-serif, system-ui, sans-serif;
+@theme {
+  --font-sans: "Readex Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Aref Ruqaa", "Readex Pro", serif;
 
-  /* Contrast on white / lavender-50 (WCAG): ink 15:1, brand 8.6:1, slate-600 ~7:1 */
-  --color-ink: #2b1b3f;
-  --color-brand: #5a3c8c;
-  --color-brand-dark: #472d73;
-  --color-lavender-50: #f6f2fb;
-  --color-lavender-100: #ece4f7;
-  --color-lavender-200: #dccef0;
+  --color-ink: #1e0b33;
+  --color-violet: #3a1460;
+  --color-brand: #6b2f9e;
+  --color-lilac: #cbb5eb;
+  --color-lilac-100: #efe6fa;
+  --color-mist: #f6f0fc;
+  --color-wa: #138a4f;
+
+  --animate-rise: rise 0.95s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(2.5rem); }
+    to { opacity: 1; transform: none; }
+  }
 }
 
 html {
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
 }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-rise { animation: none; }
+}
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+.font-display { word-spacing: 0.14em; }
